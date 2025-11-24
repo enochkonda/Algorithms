@@ -11,5 +11,5 @@ If yes, output "YES", the shortest path length, and a sequence of moves (L, R, U
 Solution:
 I used direction arrays called dx and dy to simulate choosing the four cardinal direcitons. 
 While using BFS, I used a 2D array that, given a node (coordinate pair) gives that parent of that node.
-To recover the shortest path, I set current node as B, found it's parent using the 2D array, and used a loop to 
-use the 2D array to find the parent of its parent nodes until I found node A.
+To recover the shortest path, I set current node as B, and looped through it's parents using the 2D array
+until I found node A
