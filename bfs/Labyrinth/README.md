@@ -1,4 +1,4 @@
-https://cses.fi/problemset/task/1193
+Problem: https://cses.fi/problemset/task/1193
 
 Problem Summary:
 You are given n x m grid representing a maze. Each cell can be open or blocked and the goal is to move from point A to target B. 
