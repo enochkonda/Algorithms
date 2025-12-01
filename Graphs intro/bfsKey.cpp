@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+	int n, edges;
+	cin >> n >> edges;
+	
+	vector<int> adj[n];  // adjacency list representation
+	
+	int u, v;
+	for(int i = 0; i < edges; i++)
+	{
+		cin >> u >> v;
+		adj[u].push_back(v);
+		adj[v].push_back(u);
+	}
+	
+	int s; // source vertex
+	cin >> s;
+	queue<int> q;
+	vector<bool> used(n);
+	vector<int> d(n), p(n);
+
+	q.push(s);
+	used[s] = true;
+	p[s] = -1;
+	while (!q.empty()) {
+		int v = q.front();
+		q.pop();
+		for (int u : adj[v]) {
+			if (!used[u]) {
+				used[u] = true;
+				q.push(u);
+				d[u] = d[v] + 1;
+				p[u] = v;
+			}
+		}
+	}
+	cin >> u;
+	if (!used[u]) {
+    cout << "No path!";
+	} else {
+		vector<int> path;
+		for (int v = u; v != -1; v = p[v])
+			path.push_back(v);
+		reverse(path.begin(), path.end());
+		cout << "Path: ";
+		for (int v : path)
+			cout << v << " ";
+	}
+}
+
