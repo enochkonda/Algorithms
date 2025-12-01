@@ -1,0 +1,1 @@
+Here, I have moved my competitive programming solutions onto github to make a topic based compilation of solutions. You will need to click two folders at most to reach a C++ file. Some C++ files have solution explanations.
