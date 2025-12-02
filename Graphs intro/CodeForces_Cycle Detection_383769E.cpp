@@ -1,14 +1,14 @@
 #include <bits/stdc++.h>
-
+ 
 using namespace std;
-
+ 
 vector<int> color;
 //parents
 vector<int> p;
 const int N = 1e3;
 vector<int> adj[N + 1];
 int endCycle = -1;
-
+ 
 void dfs(int v)
 {
 	//not visited
@@ -30,7 +30,7 @@ void dfs(int v)
 	}
 }
 			
-
+ 
 int main()
 {
 	//nodes and edges

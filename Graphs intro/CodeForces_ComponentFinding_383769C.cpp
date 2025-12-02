@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
-
+ 
 using namespace std;
-
-const int N = 100;
+ 
+const int N = 1e3;
 int n, m;
 vector<int> adj[N];
-
+ 
 vector<bool> visited(N);
 vector<int> parents(N);
-
-
+ 
+ 
 void dfs(int vertex, vector<int> &cp)
 {
 	if(visited[vertex])
@@ -27,7 +27,7 @@ void dfs(int vertex, vector<int> &cp)
 	
 	return;
 }
-
+ 
 int main()
 {
 	//number of nodes and edges
@@ -46,19 +46,32 @@ int main()
 	}
 	
 	//boolean vector for visited
+	vector<vector<int>> ans;
+	int components = 0;
 	for(int u = 1; u <= n; u++)
 	{
-		//dfs on all unvisited nodes
 		if(!visited[u])
 		{
-			//clears the vector but keep the visited array
 			vector<int> connectedComponents;
 			dfs(u, connectedComponents);
+ 
+			vector<int> tmp;
 			for(int i : connectedComponents)
 			{
-				cout << i << " ";
+				tmp.push_back(i);
 			}
-			cout << endl;
+			ans.push_back(tmp);
+			components++;
 		}
 	}	
+	cout << components << endl;
+	for(int i = 0; i < components; i++)
+	{
+		cout << (int)ans[i].size();
+		for(int j = 0; j < (int)ans[i].size(); j++)
+		{
+			cout << " " << ans[i][j];
+		}
+		if(i != components - 1) cout << endl;
+	}
 }

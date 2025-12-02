@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
-
+ 
 using namespace std;
-
+ 
 const int N = 1e5;
 int n, m;
 vector<int> adj[N];
 //boolean vector for visited
 vector<bool> visited(N);
 vector<int> parents(N);
-
-
+ 
+ 
 void dfs(int vertex, int parent, int i)
 {
 	if(visited[vertex])
@@ -28,7 +28,7 @@ void dfs(int vertex, int parent, int i)
 	
 	return;
 }
-
+ 
 int main()
 {
 	//number of nodes and edges
