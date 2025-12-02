@@ -1,1 +1,1 @@
-Here, I have moved my competitive programming solutions onto github to make a topic based compilation of solutions. If you still see folders after clicking a topic folder, that means that the folders you are seeing have the given problem and a note.
+Here, I have moved my competitive programming solutions onto github to make a topic based compilation of my solutions. If you still see folders after clicking a topic folder, that means that the folders you are seeing have the given problem and a note.
