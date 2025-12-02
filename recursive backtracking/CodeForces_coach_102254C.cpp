@@ -2,7 +2,7 @@
 
 using namespace std;
 int n, x, d;
-int counter = 0;
+int counter = 0; 
 vector<int> students;
 
 typedef long long ll;
